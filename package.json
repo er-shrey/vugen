@@ -1,0 +1,53 @@
+{
+  "name": "vugen",
+  "description": "Extension for Vue JS",
+  "version": "1.0.0",
+  "author": "er-shrey",
+  "bin": {
+    "vugen": "./bin/run"
+  },
+  "bugs": "https://github.com/er-shrey/vugen.git/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0",
+    "chalk": "^4.1.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "globby": "^10.0.2",
+    "rimraf": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/er-shrey/vugen.git",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "vugen",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "https://github.com/er-shrey/vugen.git",
+  "scripts": {
+    "postpack": "rimraf oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
